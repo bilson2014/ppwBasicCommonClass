@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * EasyUI DataGride组件
+ * EasyUI DataGrid组件
  * @author Jack
  * @version 1.0
  * @param <T>
  */
-public class DataGride<T> implements Serializable {
+public class DataGrid<T> implements Serializable {
 
 	private static final long serialVersionUID = -1357391928324563376L;
 	
@@ -19,12 +19,12 @@ public class DataGride<T> implements Serializable {
 	/** 行数据 **/
 	private List<T> rows = null;
 	
-	public DataGride(long total, List<T> rows) {
+	public DataGrid(long total, List<T> rows) {
 		this.total = total;
 		this.rows = rows;
 	}
 	
-	public DataGride() {
+	public DataGrid() {
 		
 	}
 

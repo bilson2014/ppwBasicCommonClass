@@ -26,6 +26,28 @@ public class PageParam implements Serializable {
 
 	/** 排序字段 **/
 	private String sort = null;
+	
+	/** 当前页 **/
+	private int page = 1;
+	
+	/** 每页显示记录数 **/
+	private int rows = 20;
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getRows() {
+		return rows;
+	}
+
+	public void setRows(int rows) {
+		this.rows = rows;
+	}
 
 	public long getBegin() {
 		return begin;
