@@ -118,7 +118,7 @@ public class JsonUtil {
                 // 获取在对象f中属性fields[i]对应的对象中的变量  
                 Object o = fields[i].get(t);  
                 if (o != null)  
-                    map.put(varName, o.toString());  
+                    map.put(varName, o);  
                 // 恢复访问控制权限  
                 fields[i].setAccessible(accessFlag);  
             } catch (IllegalArgumentException ex) {  
