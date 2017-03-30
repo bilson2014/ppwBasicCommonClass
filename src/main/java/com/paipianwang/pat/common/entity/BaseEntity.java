@@ -1,6 +1,15 @@
 package com.paipianwang.pat.common.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.paipianwang.pat.common.entity.json.LocalDateDeserializer;
+import com.paipianwang.pat.common.entity.json.LocalDateSerializer;
+import com.paipianwang.pat.common.entity.json.LocalTimeDeserializer;
+import com.paipianwang.pat.common.entity.json.LocalTimeSerializer;
 
 public class BaseEntity implements Serializable {
 
@@ -28,4 +37,19 @@ public class BaseEntity implements Serializable {
 		this.version = version;
 	}
 	
+	public String toString() {
+		final GsonBuilder builder = new GsonBuilder();
+		builder.registerTypeAdapter(LocalDate.class, new LocalDateSerializer());
+		builder.registerTypeAdapter(LocalTime.class, new LocalTimeSerializer());
+		final Gson gson = builder.create();
+		return gson.toJson(this);
+	}
+
+	public <T> T fromString(final String json, final Class<T> T) {
+		final GsonBuilder builder = new GsonBuilder();
+		builder.registerTypeAdapter(LocalDate.class, new LocalDateDeserializer());
+		builder.registerTypeAdapter(LocalTime.class, new LocalTimeDeserializer());
+		final Gson gson = builder.create();
+		return gson.fromJson(json, T);
+	}
 }
