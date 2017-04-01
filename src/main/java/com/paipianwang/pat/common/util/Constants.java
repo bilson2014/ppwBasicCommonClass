@@ -51,7 +51,7 @@ public final class Constants {
 
 	private static void load() {
 		InputStream is = Constants.class.getClassLoader().getResourceAsStream(
-				"jdbc.properties");
+				"db.properties");
 		try {
 			Properties propertis = new Properties();
 			propertis.load(is);
