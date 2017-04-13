@@ -44,6 +44,11 @@ public class PublicConfig implements Serializable {
 	 * 域名，用于保持 http 产生的 cookie
 	 */
 	public static String COOKIES_SCOPE = PUBLIC_CONFIG.get("cookies_scope");
+	
+	/**
+	 * 是否测试环境
+	 */
+	public static String IS_AUTO_TEST = PUBLIC_CONFIG.get("auto.test");
 
 	/**
 	 * 新订单短信通知手机号码
@@ -129,6 +134,21 @@ public class PublicConfig implements Serializable {
 	 * 文件系统备用下载服务路径
 	 */
 	public static String FDFS_BACKUP_SERVER_PATH = PUBLIC_CONFIG.get("backup.server.dfs.url");
+	
+	/**
+	 * FastDFS 连接池最小值
+	 */
+	public static String FDFS_MIN_POOL_SIZE = PUBLIC_SYSTEM.get("minPoolSize");
+	
+	/**
+	 * FastDFS 连接池最大值
+	 */
+	public static String FDFS_MAX_POOL_SIZE = PUBLIC_SYSTEM.get("maxPoolSize");
+	
+	/**
+	 * FastDFS 连接池最大等待时长
+	 */
+	public static String FDFS_WAIT_TIMES = PUBLIC_SYSTEM.get("waitTimes");
 
 	/**
 	 * 通过审核的供应商及分级的客户 SOLR URL 入口

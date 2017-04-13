@@ -114,27 +114,27 @@ public class PmsConstant {
 	public static final String ROLE_MANAGER = "role_manager";
 
 	/**
-	 * 推荐视频标签权重数组
-	 * 从第一个开始一次递减
+	 * 推荐视频标签权重数组 从第一个开始一次递减
 	 */
-	public static final int[] weightArr = new int[] { 10, 8, 6 };
-	
+	public static final int[] WEIGHT_ARR = new int[] { 10, 8, 6 };
+
 	/**
 	 * 供应商通过审核
 	 */
 	public final static int INVOICE_STATUS_OK = 1;
-	
+
 	/**
 	 * 供应商审核不通过
 	 */
 	public final static int INVOICE_STATUS_NO = 2;
-	
+
 	public final static int MSG_FAIL = 1;
-	
+
 	public final static int MSG_SUCCESS = 0;
-	
+
 	// state Constants
 	public final static String FAIL = "FAIL";
-	
+
 	public final static String SUCCESS = "SUCCESS";
+
 }
