@@ -9,6 +9,16 @@ package com.paipianwang.pat.common.constant;
 public class PmsConstant {
 
 	/**
+	 * SESSION 存储400电话的key值
+	 */
+	public static final String OFFICAL_PHONE_MARK = "OFFICAL_PHONE";
+	
+	/**
+	 * 官方电话号码
+	 */
+	public static final String OFFICAL_PHONE = "400-660-9728";
+	
+	/**
 	 * SESSION 存储当前用户的key值
 	 */
 	public static final String SESSION_INFO = "sessionInfo";
