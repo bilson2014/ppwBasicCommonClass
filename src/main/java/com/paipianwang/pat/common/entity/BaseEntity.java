@@ -15,6 +15,9 @@ public class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = -6346046812684733942L;
 	
+	public static String SAVE_MAP_ID = "save_map_id";
+	public static String SAVE_MAP_ROWS = "save_map_rows";
+	
 	/** 唯一编号 **/
 	private Long id = null;
 	
