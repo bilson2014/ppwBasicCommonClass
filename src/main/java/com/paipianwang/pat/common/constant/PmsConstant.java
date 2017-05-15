@@ -7,6 +7,11 @@ package com.paipianwang.pat.common.constant;
  * @version 2017-03-21
  */
 public class PmsConstant {
+	
+	/**
+	 * 渠道来源标识
+	 */
+	public static final String SOURCE_CHANNELS = "source_channels";
 
 	/**
 	 * SESSION 存储400电话的key值
@@ -146,5 +151,35 @@ public class PmsConstant {
 	public final static String FAIL = "FAIL";
 
 	public final static String SUCCESS = "SUCCESS";
+	
+	/**
+	 * 视频类别 专业级导演团队（3-5）默认 广告级导演团队（5-8） 电影级导演团队（8-10） 活动视频1 ￥ 30,000.00 ￥
+	 * 60,000.00 ￥ 100,000.00 产品广告 ￥ 60,000.00 ￥ 100,000.00 ￥ 200,000.00 企业宣传 ￥
+	 * 30,000.00 ￥ 60,000.00 ￥ 100,000.00 微电影 ￥ 60,000.00 ￥ 100,000.00 ￥
+	 * 200,000.00 融资路演 ￥ 30,000.00 ￥ 60,000.00 ￥ 100,000.00 众筹视频 ￥ 30,000.00 ￥
+	 * 60,000.00 ￥ 100,000.00
+	 */
+	
+	public static int[][] TYPE_ADD_TEAM = new int[6][3];// 初始化6行3列的 视频+导演价格表
+	static {
+		TYPE_ADD_TEAM[0][0] = 30000;
+		TYPE_ADD_TEAM[0][1] = 60000;
+		TYPE_ADD_TEAM[0][2] = 100000;
+		TYPE_ADD_TEAM[1][0] = 60000;
+		TYPE_ADD_TEAM[1][1] = 100000;
+		TYPE_ADD_TEAM[1][2] = 200000;
+		TYPE_ADD_TEAM[2][0] = 30000;
+		TYPE_ADD_TEAM[2][1] = 60000;
+		TYPE_ADD_TEAM[2][2] = 100000;
+		TYPE_ADD_TEAM[3][0] = 60000;
+		TYPE_ADD_TEAM[3][1] = 100000;
+		TYPE_ADD_TEAM[3][2] = 200000;
+		TYPE_ADD_TEAM[4][0] = 30000;
+		TYPE_ADD_TEAM[4][1] = 60000;
+		TYPE_ADD_TEAM[4][2] = 100000;
+		TYPE_ADD_TEAM[5][0] = 30000;
+		TYPE_ADD_TEAM[5][1] = 60000;
+		TYPE_ADD_TEAM[5][2] = 100000;
+	}
 
 }
