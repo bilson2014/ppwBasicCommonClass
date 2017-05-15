@@ -15,26 +15,30 @@ public class FileUtils {
 
 	/**
 	 * 获取文件后缀名
-	 * @param fileName 文件名
-	 * @param split 分隔符
+	 * 
+	 * @param fileName
+	 *            文件名
+	 * @param split
+	 *            分隔符
 	 * @return 文件后缀名
 	 */
-	public static String getExtName(final String fileName,final String split){
-		
+	public static String getExtName(final String fileName, final String split) {
+
 		if (fileName.lastIndexOf(".") != -1 && fileName.lastIndexOf(".") != 0) {
 			return fileName.substring(fileName.lastIndexOf(".") + 1);
 		} else {
 			return "";
 		}
 	}
-	
+
 	/**
 	 * 获取文件上传地址
+	 * 
 	 * @param demand
 	 * @param is
 	 * @return
 	 */
-	public static String getServerUploadPath(final String demand,final InputStream is){
+	public static String getServerUploadPath(final String demand, final InputStream is) {
 		try {
 			Properties propertis = new Properties();
 			propertis.load(is);
@@ -44,44 +48,46 @@ public class FileUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return null;
 	}
-	
-	public static void deleteFile(final String path){
-		if(path != null && !"".equals(path)){
+
+	public static void deleteFile(final String path) {
+		if (path != null && !"".equals(path)) {
 			File file = new File(path);
-			if(file.exists() && !file.isDirectory()){
+			if (file.exists() && !file.isDirectory()) {
 				file.delete();
 			}
 		}
 	}
-	
+
 	/**
 	 * 根据后缀名分辨 视频/图片 文件
-	 * @param extName 文件后缀名
- 	 * @param imageType 图片类型
-	 * @param videoType 视频类型
-	 * @return 0 视频文件 / 1  图片文件 / 2 其他文件
+	 * 
+	 * @param extName
+	 *            文件后缀名
+	 * @param imageType
+	 *            图片类型
+	 * @param videoType
+	 *            视频类型
+	 * @return 0 视频文件 / 1 图片文件 / 2 其他文件
 	 */
-	public static short divideIntoGroup(final String extName,
-										 final String imageType,
-										 final String videoType){
+	public static short divideIntoGroup(final String extName, final String imageType, final String videoType) {
 		final String[] iTypeArray = imageType.split("/");
 		final String[] vTypeArray = videoType.split("/");
 		for (final String type : iTypeArray) {
-			if(type.equalsIgnoreCase(extName)){
+			if (type.equalsIgnoreCase(extName)) {
 				return 1;
 			}
 		}
 		for (final String type : vTypeArray) {
-			if(type.equalsIgnoreCase(extName)){
+			if (type.equalsIgnoreCase(extName)) {
 				return 0;
 			}
 		}
 		return 2;
 	}
-	
+
 	/**
 	 * 保存文件流到硬盘
 	 * 
@@ -89,8 +95,7 @@ public class FileUtils {
 	 * @param path
 	 * @return
 	 */
-	public static boolean saveFileByInputStream(final InputStream is,
-			final String path) {
+	public static boolean saveFileByInputStream(final InputStream is, final String path) {
 		boolean state = false;
 		byte[] dataBuf = new byte[2048];
 		BufferedInputStream bis = new BufferedInputStream(is, 8192);
@@ -156,30 +161,45 @@ public class FileUtils {
 			e.printStackTrace();
 		}
 	}
-	//复制文件
-	public static void copyFile(File source, File target) {  
-	    InputStream fis = null;
-	    OutputStream fos = null;
-	    try {
-	        fis = new FileInputStream(source);
-	        fos = new FileOutputStream(target);
-	        byte[] buf = new byte[1024];
-	        int i;
-	        while ((i = fis.read(buf)) != -1){
-	            fos.write(buf, 0, i);
-	        }
-	    }
-	    catch (Exception e) {
-	        e.printStackTrace();
-	    } finally {
-	    	try {
-				if(fis!=null)
+
+	// 复制文件
+	public static void copyFile(File source, File target) {
+		InputStream fis = null;
+		OutputStream fos = null;
+		try {
+			fis = new FileInputStream(source);
+			fos = new FileOutputStream(target);
+			byte[] buf = new byte[1024];
+			int i;
+			while ((i = fis.read(buf)) != -1) {
+				fos.write(buf, 0, i);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (fis != null)
 					fis.close();
-				if(fos!=null)
+				if (fos != null)
 					fos.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-	    }  
+		}
+	}
+
+	/**
+	 * 检测是否是移动端图片
+	 * 
+	 * @param fileName
+	 * @return
+	 */
+	public static boolean isMPicture(String fileName) {
+		if (ValidateUtil.isValid(fileName)) {
+			char charAt = fileName.charAt(0);
+			if (charAt == 'm')
+				return true;
+		}
+		return false;
 	}
 }
