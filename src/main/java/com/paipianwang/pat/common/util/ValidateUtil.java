@@ -8,6 +8,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.paipianwang.pat.common.entity.BaseRight;
 import com.paipianwang.pat.common.entity.SessionInfo;
 
@@ -16,7 +18,7 @@ public class ValidateUtil {
 	
 	public static boolean isValid(final String str){
 		
-		if(str !=null && !"".equals(str)){
+		if(StringUtils.isNotBlank(str)){
 			
 			return true;
 		}
