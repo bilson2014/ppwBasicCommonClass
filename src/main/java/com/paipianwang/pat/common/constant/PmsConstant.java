@@ -57,7 +57,11 @@ public class PmsConstant {
 	 * 登录角色 -- 供应商管家
 	 */
 	public static final String ROLE_PROVIDERMANAGER = "role_providermanager";
-
+	
+	/**
+	 * 登录角色 -- 客服
+	 */
+	public static final String ROLE_CUSTOMER_SERVICE = "role_customer_service";
 	/**
 	 * 登录角色 -- 系统
 	 */
