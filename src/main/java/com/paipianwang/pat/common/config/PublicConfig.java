@@ -44,7 +44,7 @@ public class PublicConfig implements Serializable {
 	 * 域名，用于保持 http 产生的 cookie
 	 */
 	public static String COOKIES_SCOPE = PUBLIC_CONFIG.get("cookies_scope");
-	
+
 	/**
 	 * 是否测试环境
 	 */
@@ -59,32 +59,32 @@ public class PublicConfig implements Serializable {
 	 * 初始化密码
 	 */
 	public static String INIT_PASSWORD = PUBLIC_CONFIG.get("initPassw0rd");
-	
+
 	/**
 	 * 作品缩略图大小最大限制 256KB
 	 */
 	public static String PRODUCT_IMAGE_MAX_SIZE = PUBLIC_CONFIG.get("productImageMaxSize");
-	
+
 	/**
 	 * 允许照片上传格式
 	 */
 	public static String ALLOW_IMAGE_TYPE = PUBLIC_CONFIG.get("allowImageType");
-	
+
 	/**
 	 * 图片最大不允许超过2M
 	 */
 	public static String IMAGE_MAX_SIZE = PUBLIC_CONFIG.get("imageMaxSize");
-	
+
 	/**
 	 * 允许上传的视频格式
 	 */
 	public static String ALLOW_VIDEO_TYPE = PUBLIC_CONFIG.get("allowVideoType");
-	
+
 	/**
 	 * 上传视频最大值
 	 */
 	public static String VIDEO_MAX_SIZE = PUBLIC_CONFIG.get("videoMaxSize");
-	
+
 	/**
 	 * 访问来源
 	 */
@@ -134,17 +134,17 @@ public class PublicConfig implements Serializable {
 	 * 文件系统备用下载服务路径
 	 */
 	public static String FDFS_BACKUP_SERVER_PATH = PUBLIC_CONFIG.get("backup.server.dfs.url");
-	
+
 	/**
 	 * FastDFS 连接池最小值
 	 */
 	public static String FDFS_MIN_POOL_SIZE = PUBLIC_SYSTEM.get("minPoolSize");
-	
+
 	/**
 	 * FastDFS 连接池最大值
 	 */
 	public static String FDFS_MAX_POOL_SIZE = PUBLIC_SYSTEM.get("maxPoolSize");
-	
+
 	/**
 	 * FastDFS 连接池最大等待时长
 	 */
@@ -169,28 +169,34 @@ public class PublicConfig implements Serializable {
 	 * 新闻SOLR NEW 入口
 	 */
 	public static String SOLR_NEWS_URL = PUBLIC_CONFIG.get("solr.news.url");
-	
+
 	/**
 	 * 文档转换服务地址
 	 */
 	public static String FILE_CONVERTION_SERVER = PUBLIC_SYSTEM.get("file.conversion");
-	
+
 	/**
 	 * 文档上传临时目录
 	 */
 	public static String DOC_TEMP_PATH = PUBLIC_SYSTEM.get("doc.temp.path");
-	
+
 	/**
 	 * Activiti 流程服务ID
 	 */
 	public static String ACTIVITY_PRODUCT_IDS = PUBLIC_SYSTEM.get("activity.product.ids");
-	
+
 	/**
 	 * 文件地址前缀
 	 */
 	public static String FILE_PROFIX = PUBLIC_SYSTEM.get("file.prefix");
-	
-	public static String PRODUCT_DESCRIPTION_IMAGE_URL = PUBLIC_SYSTEM.get("upload.server.product.description.image.url");
-	
+
+	public static String PRODUCT_DESCRIPTION_IMAGE_URL = PUBLIC_SYSTEM
+			.get("upload.server.product.description.image.url");
+
 	public static String PRODUCT_DESCRIPTION_IMAGE_PATH = PUBLIC_SYSTEM.get("upload.server.product.description.image");
+
+	/**
+	 * 需求文档配置文件
+	 */
+	public static String REQUIER_CONFIG = PUBLIC_SYSTEM.get("requier.config");
 }
