@@ -190,8 +190,7 @@ public class PublicConfig implements Serializable {
 	 */
 	public static String FILE_PROFIX = PUBLIC_SYSTEM.get("file.prefix");
 
-	public static String PRODUCT_DESCRIPTION_IMAGE_URL = PUBLIC_SYSTEM
-			.get("upload.server.product.description.image.url");
+	public static String PRODUCT_DESCRIPTION_IMAGE_URL = PUBLIC_SYSTEM.get("upload.server.product.description.image.url");
 
 	public static String PRODUCT_DESCRIPTION_IMAGE_PATH = PUBLIC_SYSTEM.get("upload.server.product.description.image");
 
