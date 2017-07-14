@@ -30,6 +30,8 @@ public class SessionInfo extends BaseEntity {
 	
 	private boolean isIdentification = false; // 供应商是否被审核
 	
+	private int providerFlag = 3; // 供应商审核状态  0:未审核 1:审核通过 2:审核未通过 3:未提交
+	
 	//add by wanglc 缓存手机号
 	private String telephone = null; // 手机号
 	
@@ -151,4 +153,13 @@ public class SessionInfo extends BaseEntity {
 	public void setIsIdentification(boolean isIdentification) {
 		this.isIdentification = isIdentification;
 	}
+
+	public int getProviderFlag() {
+		return providerFlag;
+	}
+
+	public void setProviderFlag(int providerFlag) {
+		this.providerFlag = providerFlag;
+	}
+	
 }
