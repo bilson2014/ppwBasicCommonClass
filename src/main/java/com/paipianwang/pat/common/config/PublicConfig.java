@@ -198,4 +198,12 @@ public class PublicConfig implements Serializable {
 	 * 需求文档配置文件
 	 */
 	public static String REQUIER_CONFIG = PUBLIC_SYSTEM.get("requier.config");
+	/**
+	 * tdk参数配置文件
+	 */
+	public static String TDK_CONFIG=PUBLIC_CONFIG.get("tdk.config");
+	/**
+	 * film访问地址
+	 */
+	public static String FILM_URL=PUBLIC_CONFIG.get("film_url");
 }
