@@ -41,6 +41,8 @@ public final class Constants {
 	public  static  Map<String,String> INFO_RESOURCE_MAP ;
 	//业务范围
 	public  static  Map<String,String> BUSINESS_MAP ;
+	//公司规模
+	public static Map<String,String> SCALE_MAP;
 	private Constants() {
 		load();
 	}
@@ -86,13 +88,17 @@ public final class Constants {
 		INFO_RESOURCE_MAP =  new LinkedHashMap<String,String>();
 		//业务范围
 		BUSINESS_MAP =  new LinkedHashMap<String,String>();
+		//公司规模
+		SCALE_MAP=new LinkedHashMap<>();
 		
-		PRICE_RANGE_MAP.put("0", "看情况");
-		PRICE_RANGE_MAP.put("1", "1万元及以上");
-		PRICE_RANGE_MAP.put("2", "2万元及以上");
-		PRICE_RANGE_MAP.put("3", "3万元及以上");
-		PRICE_RANGE_MAP.put("4", "5万元及以上");
-		PRICE_RANGE_MAP.put("5", "10万元及以上");
+		PRICE_RANGE_MAP.put("1", "50万以上");
+		PRICE_RANGE_MAP.put("2", "20-50万");
+		PRICE_RANGE_MAP.put("3", "10-20万");
+		PRICE_RANGE_MAP.put("4", "5-10万");
+		PRICE_RANGE_MAP.put("5", "3-5万");
+		PRICE_RANGE_MAP.put("6", "1-3万");
+		PRICE_RANGE_MAP.put("7", "5千-1万");
+		PRICE_RANGE_MAP.put("8", "5千以内");
 		
 		
 		INFO_RESOURCE_MAP.put("0", "友情推荐");
@@ -120,6 +126,13 @@ public final class Constants {
 		BUSINESS_MAP.put("16", "TVC");
 		BUSINESS_MAP.put("17", "MV");
 		BUSINESS_MAP.put("18", "包装");
+		
+		SCALE_MAP.put("0","5人以下");
+		SCALE_MAP.put("1","5-10人");
+		SCALE_MAP.put("2","11-50人");
+		SCALE_MAP.put("3","51-100人");
+		SCALE_MAP.put("4","101-500人");
+		SCALE_MAP.put("5","500人以上");
 	}
 	
 	
