@@ -22,7 +22,7 @@ public class BaseEntity implements Serializable {
 	private Long id = null;
 	
 	/** 版本号 **/
-	private Integer version = 0;
+	private Integer version;
 
 	public Long getId() {
 		return id;

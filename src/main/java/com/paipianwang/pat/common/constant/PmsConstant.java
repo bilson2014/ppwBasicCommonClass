@@ -186,4 +186,7 @@ public class PmsConstant {
 		TYPE_ADD_TEAM[5][2] = 100000;
 	}
 
+	public static final String SQL_METADATA = "metaData";
+	
+	public static final String SQL_CONDITION = "condition";
 }
