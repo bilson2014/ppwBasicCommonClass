@@ -16,11 +16,11 @@ public enum ProjectRoleType {
 	teamProvider("teamProvider","供应商管家"),
 	teamPurchase("teamPurchase","供应商采购"),
 	scheme("scheme","策划"),
-	finance("finance","财务"),
+	finance("finance","财务"),//财务出纳
 	supervise("supervise","监制"),
 
 	teamDirector("teamDirector","供应商总监"),
-	financeDirector("financeDirector","财务总监"),
+	financeDirector("financeDirector","财务总监"),//财务主管
 	customerDirector("customerDirector","客服总监"),
 	crm("crm","CRM"),
 	produce("produce","制作")
