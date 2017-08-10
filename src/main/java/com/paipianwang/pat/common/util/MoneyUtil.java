@@ -10,7 +10,7 @@ public class MoneyUtil {
 	private static final double MAX_VALUE = 9999999999999.99D;
 
 	/**
-	 * 金额转大写
+	 * 金额转大写 
 	 * 
 	 * @param v
 	 * @return

@@ -14,7 +14,7 @@ public enum FileType {
 	priceSheet("priceSheet","报价单"),
 	watermark("watermark","拍片网专用水印"),
 	
-	//自动生成类文件
+	// 自动生成类文件
 	autoProjectSheet("autoProjectSheet","项目制作单","项目制作单.xlsx",2),
 	autoCpsl("autoCpsl","客户项目服务函","客户项目服务函.docx",2)
 	;
