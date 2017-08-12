@@ -208,4 +208,9 @@ public class PublicConfig implements Serializable {
 	 * film访问地址
 	 */
 	public static String FILM_URL = PUBLIC_CONFIG.get("film_url");
+	/**
+	 * 自动生成文件模板路径
+	 */
+	public static String FILE_TEMPLATE_PATH=PUBLIC_CONFIG.get("file.template.path");
+	public static String ProCycle_CONFIG_PATH = PUBLIC_CONFIG.get("projectcycle.config.path");
 }
