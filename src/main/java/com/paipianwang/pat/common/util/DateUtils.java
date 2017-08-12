@@ -201,4 +201,12 @@ public class DateUtils {
 		}
 		return formatTimeStr;
 	}
+	
+	public static Date addHour(Date date,int hour){
+		Calendar c = Calendar.getInstance();
+		c.setTimeInMillis(date.getTime());
+		c.add(Calendar.HOUR_OF_DAY, hour);
+		return c.getTime();
+	}
+	
 }
