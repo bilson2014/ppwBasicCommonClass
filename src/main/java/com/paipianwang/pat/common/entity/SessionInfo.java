@@ -1,40 +1,46 @@
 package com.paipianwang.pat.common.entity;
 
+import java.util.List;
+
 public class SessionInfo extends BaseEntity {
 
 	private static final long serialVersionUID = -8244829888233273132L;
 
 	private String token = null; // 令牌
-	
+
 	private String sessionType = null; // 用户类型
-	
+
 	private long[] sum;
-	
+
 	private boolean superAdmin = false; // 超级管理员
-	
+
 	private String description = null; // 描述
-	
+
 	private String loginName = null; // 登录名
-	
+
 	private String realName = null; // 真实姓名
-	
+
 	private Long reqiureId = null; // 唯一ID
-	
+
 	private String email = null; // 邮箱
-	
+
 	private String address = null; // 地址
-	
+
 	private String photo = null; // 头像
-	
+
 	private Integer clientLevel = null; // 客户级别
-	
+
 	private boolean isIdentification = false; // 供应商是否被审核
-	
-	private int providerFlag = 3; // 供应商审核状态  0:未审核 1:审核通过 2:审核未通过 3:未提交
-	
-	//add by wanglc 缓存手机号
+
+	private int providerFlag = 3; // 供应商审核状态 0:未审核 1:审核通过 2:审核未通过 3:未提交
+
+	private String activitiUserId = null; // 流程身份唯一ID
+
+	private List<String> activitGroups = null; // 流程权限组
+
+	// add by wanglc 缓存手机号
 	private String telephone = null; // 手机号
-	
+
 	public String getTelephone() {
 		return telephone;
 	}
@@ -82,7 +88,7 @@ public class SessionInfo extends BaseEntity {
 	public void setSuperAdmin(boolean superAdmin) {
 		this.superAdmin = superAdmin;
 	}
-	
+
 	public String getLoginName() {
 		return loginName;
 	}
@@ -122,8 +128,8 @@ public class SessionInfo extends BaseEntity {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public boolean hasRight(final BaseRight right){
+
+	public boolean hasRight(final BaseRight right) {
 		int pos = right.getPos();
 		long code = right.getCode();
 		long ret = sum[pos] & code;
@@ -161,5 +167,21 @@ public class SessionInfo extends BaseEntity {
 	public void setProviderFlag(int providerFlag) {
 		this.providerFlag = providerFlag;
 	}
-	
+
+	public List<String> getActivitGroups() {
+		return activitGroups;
+	}
+
+	public void setActivitGroups(List<String> activitGroups) {
+		this.activitGroups = activitGroups;
+	}
+
+	public String getActivitiUserId() {
+		return activitiUserId;
+	}
+
+	public void setActivitiUserId(String activitiUserId) {
+		this.activitiUserId = activitiUserId;
+	}
+
 }
