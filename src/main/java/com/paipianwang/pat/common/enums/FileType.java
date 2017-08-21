@@ -7,13 +7,13 @@ public enum FileType {
 
 	projectBrief("projectBrief","项目简报"),
 	projectPlan("projectPlan","项目排期"),
-	planning("planning","策划方案","策划方案.docx",3),
+	planning("planning","策划方案","planning.docx",3),
 	ppm("ppm","PPM"),
 	vedioRevise("vedioRevise","影片修改表"),
 	customerReply("customerReply","客户验收函回复截图"),
 	priceSheet("priceSheet","报价单"),
 	watermark("watermark","拍片网专用水印"),
-	shootingScript("shootingScript","分镜头脚本","分镜头模板.docx",3),
+	shootingScript("shootingScript","分镜头脚本","shootingScript.docx",3),
 	
 	// 自动生成类文件
 	autoProjectSheet("autoProjectSheet","项目制作单","项目制作单.xlsx",2),
