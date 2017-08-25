@@ -12,6 +12,7 @@ public enum FileType {
 	demoUpdate("demoUpdate","影片修改表"),
 	customerReply("customerReply","客户验收函回复截图"),
 	priceSheet("priceSheet","报价单"),
+	watermarkFile("watermarkFile","水印样片"),
 	
 	watermark("watermark","拍片网专用水印"),
 	shootingScript("shootingScript","分镜头脚本","shootingScript.docx",3),
