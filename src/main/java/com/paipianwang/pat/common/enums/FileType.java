@@ -19,8 +19,7 @@ public enum FileType {
 	
 	// 自动生成类文件
 	autoProjectSheet("autoProjectSheet","项目制作单","项目制作单.xlsx",2),
-	autoCpsl("autoCpsl","客户项目服务函","客户项目服务函.docx",2)
-	;
+	autoCpsl("autoCpsl","客户项目服务函","客户项目服务函.docx",2);
 	
 	private String id;//文件ID	
 	private String text;//文件名称
@@ -76,5 +75,16 @@ public enum FileType {
 		this.type = type;
 	}
 	
+	public static FileType getEnum(String id) {
+		FileType resultEnum = null;
+		FileType[] enumAry = FileType.values();
+		for (int i = 0; i < enumAry.length; i++) {
+			if ((enumAry[i].getId()).equals(id)) {
+				resultEnum = enumAry[i];
+				break;
+			}
+		}
+		return resultEnum;
+	}
 	
 }
