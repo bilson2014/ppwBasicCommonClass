@@ -8,7 +8,7 @@ public enum UserLevel {
 	A("0","A"),
 	B("1","B"),
 	C("2","C"),
-	D("3","D"),
+	D("4","D"),
 	noLevel("","未分级");
 	
 	private String id;
