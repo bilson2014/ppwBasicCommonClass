@@ -5,7 +5,7 @@ package com.paipianwang.pat.common.enums;
  */
 public enum FileType {
 
-	projectBrief("projectBrief","项目简报"),
+	projectBrief("projectBrief","项目资料"),
 	projectPlan("projectPlan","项目排期"),
 	planning("planning","策划方案","planning.docx",3),
 	ppm("ppm","PPM"),
