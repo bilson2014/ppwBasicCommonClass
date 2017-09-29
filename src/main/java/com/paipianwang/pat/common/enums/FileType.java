@@ -9,7 +9,7 @@ public enum FileType {
 	projectPlan("projectPlan","项目排期"),
 	planning("planning","策划方案","planning.docx",3),
 	ppm("ppm","PPM"),
-	demoUpdate("demoUpdate","影片修改表"),
+	vedioRevise("vedioRevise","影片修改表"),
 	customerReply("customerReply","客户验收函回复截图"),
 	priceSheet("priceSheet","报价单"),
 	watermarkFile("watermarkFile","水印样片"),
