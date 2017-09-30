@@ -14,7 +14,7 @@ public enum FileType {
 	priceSheet("priceSheet","报价单"),
 	watermarkFile("watermarkFile","水印样片"),
 	
-	watermark("watermark","拍片网专用水印"),
+	watermark("watermark","拍片网专用水印","watermark.png",3),
 	shootingScript("shootingScript","分镜头脚本","shootingScript.docx",3),
 	
 	// 自动生成类文件
