@@ -37,6 +37,11 @@ public final class VerifyFileUtils {
 		extName = extName.toLowerCase();
 		return extDocList.contains(extName);
 	}
+	
+	public static boolean verifyImgFile(String extName){
+		extName = extName.toLowerCase();
+		return extMap.get("image").contains(extName);
+	}
 
 	/**
 	 * 验证文件

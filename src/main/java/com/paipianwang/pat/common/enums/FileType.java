@@ -7,13 +7,15 @@ public enum FileType {
 
 	projectBrief("projectBrief","项目资料"),
 	projectPlan("projectPlan","项目排期"),
-	planning("planning","策划方案","planning.docx",3),
+	planning("planning","策划方案"),
 	ppm("ppm","PPM"),
-	vedioRevise("vedioRevise","影片修改表"),
+	vedioRevise("vedioRevise","客户影片修改表"),
+	demoUpdate("demoUpdate","会审影片修改表"),
 	customerReply("customerReply","客户验收函回复截图"),
 	priceSheet("priceSheet","报价单"),
 	watermarkFile("watermarkFile","水印样片"),
 	
+	planningDemo("planningDemo","策划方案模板","planning.docx",3),
 	watermark("watermark","拍片网专用水印","watermark.png",3),
 	shootingScript("shootingScript","分镜头脚本","shootingScript.docx",3),
 	
