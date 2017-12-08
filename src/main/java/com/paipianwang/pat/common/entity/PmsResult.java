@@ -20,6 +20,8 @@ public class PmsResult implements Serializable {
 	
 	/** 错误信息 **/
 	private String err = null;
+	/** 结果信息 **/
+	private String msg=null;
 
 	public String getCode() {
 		return code;
@@ -43,6 +45,14 @@ public class PmsResult implements Serializable {
 
 	public void setErr(String err) {
 		this.err = err;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 	
 }
