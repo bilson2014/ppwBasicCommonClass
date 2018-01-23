@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class FileUtils {
 
@@ -201,5 +203,34 @@ public class FileUtils {
 				return true;
 		}
 		return false;
+	}
+	/**
+	 * 多个文件压缩
+	 * @param destPath
+	 * @param srcfile
+	 * @return
+	 */
+	public static void zipFile(String destPath, File... srcfile) {
+		// 压缩后的文件
+		File zipfile = new File(destPath);
+
+		byte[] buf = new byte[1024];
+		try {
+			// ZipOutputStream类：完成文件或文件夹的压缩
+			ZipOutputStream out = new ZipOutputStream(new FileOutputStream(zipfile));
+			for (int i = 0; i < srcfile.length; i++) {
+				FileInputStream in = new FileInputStream(srcfile[i]);
+				out.putNextEntry(new ZipEntry(srcfile[i].getName()));
+				int len;
+				while ((len = in.read(buf)) > 0) {
+					out.write(buf, 0, len);
+				}
+				out.closeEntry();
+				in.close();
+			}
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
