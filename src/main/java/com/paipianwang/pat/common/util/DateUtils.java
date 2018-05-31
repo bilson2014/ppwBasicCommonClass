@@ -209,4 +209,15 @@ public class DateUtils {
 		return c.getTime();
 	}
 	
+	public static int getAgeByYear(int year) {
+		Calendar c = Calendar.getInstance();
+		int now=c.get(Calendar.YEAR);
+		return now-year;
+	}
+	public static int getYearByAge(int age) {
+		Calendar c = Calendar.getInstance();
+		int now=c.get(Calendar.YEAR);
+		return now-age;
+	}
+	
 }
