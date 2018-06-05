@@ -41,6 +41,7 @@ public class BaseProductionEntity extends BaseEntity {
 	//非持久化字段
 	private String teamName;
 	private String referrerName;
+	private String identity;
 	
 	public String getReferrer() {
 		return referrer;
@@ -136,6 +137,14 @@ public class BaseProductionEntity extends BaseEntity {
 
 	public void setReferrerName(String referrerName) {
 		this.referrerName = referrerName;
+	}
+
+	public String getIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(String identity) {
+		this.identity = identity;
 	}
 
 }
