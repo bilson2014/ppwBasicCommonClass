@@ -38,6 +38,9 @@ public class BaseProductionEntity extends BaseEntity {
 	/** 审核状态  1-审核通过 0-审核不通过 2-审核中 **/
 	private Integer status;
 	
+	/** 城市 **/
+	private String city;
+	
 	//非持久化字段
 	private String teamName;
 	private String referrerName;
@@ -147,4 +150,13 @@ public class BaseProductionEntity extends BaseEntity {
 		this.identity = identity;
 	}
 
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	
 }
