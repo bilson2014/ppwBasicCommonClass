@@ -213,4 +213,9 @@ public class PublicConfig implements Serializable {
 	 */
 	public static String FILE_TEMPLATE_PATH=PUBLIC_CONFIG.get("file.template.path");
 	public static String ProCycle_CONFIG_PATH = PUBLIC_CONFIG.get("projectcycle.config.path");
+	
+	/**
+	 * 默认文件服务器路径
+	 */
+	public static String FDFS_URL=PUBLIC_CONFIG.get("upload.server.dfs.url");
 }

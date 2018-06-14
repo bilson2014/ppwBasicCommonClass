@@ -220,4 +220,35 @@ public class DateUtils {
 		return now-age;
 	}
 	
+	public static int getYear(Date date) {
+		Calendar c=Calendar.getInstance();
+		if(date!=null) {
+			c.setTime(date);
+		}
+		return c.get(Calendar.YEAR);
+	}
+	
+	public static int getMonth(Date date) {
+		Calendar c=Calendar.getInstance();
+		if(date!=null) {
+			c.setTime(date);
+		}
+		return c.get(Calendar.MONTH)+1;
+	}
+	public static int getDay(Date date) {
+		Calendar c=Calendar.getInstance();
+		if(date!=null) {
+			c.setTime(date);
+		}
+		return c.get(Calendar.DAY_OF_MONTH);
+	}
+	private static String[] week=new String[] {"日","一","二","三","四","五","六"};
+	public static String getWeekDay(Date date) {
+		Calendar c=Calendar.getInstance();
+		if(date!=null) {
+			c.setTime(date);
+		}
+		return week[c.get(Calendar.DAY_OF_WEEK)-1];
+	}
+	
 }
