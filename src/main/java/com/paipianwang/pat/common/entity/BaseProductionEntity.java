@@ -41,9 +41,15 @@ public class BaseProductionEntity extends BaseEntity {
 	/** 城市 **/
 	private String city;
 	
+	/** 照片 对于设备是非持久化字段 **/
+	private String photo;
+	
 	//非持久化字段
+	/** 关联供应商名称 **/
 	private String teamName;
+	/** 推荐人名称 **/
 	private String referrerName;
+	/** 身份 **/
 	private String identity;
 	
 	public String getReferrer() {
@@ -156,6 +162,14 @@ public class BaseProductionEntity extends BaseEntity {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 	
