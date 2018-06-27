@@ -3,9 +3,12 @@ package com.paipianwang.pat.common.util;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
 import javax.imageio.ImageIO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,21 +29,21 @@ public class PhotoUtil {
 			try {
 				final BufferedImage image = ImageIO.read(is);
 				
-				final int x = param.getX();
+				final double x = param.getX();
 				
-				final int y = param.getY();
+				final double y = param.getY();
 				
-				final int x2 = param.getX2();
+				final double x2 = param.getX2();
 				
-				final int y2 = param.getY2();
+				final double y2 = param.getY2();
 				
-				final int width = param.getWidth();
+				final double width = param.getWidth();
 				
-				final int height = param.getHeight();
+				final double height = param.getHeight();
 				
-				final int originalWidth = param.getOriginalWidth();
+				final double originalWidth = param.getOriginalWidth();
 				
-				final int originalHeight = param.getOriginalHeight();
+				final double originalHeight = param.getOriginalHeight();
 				
 				if(width <=0 || height <= 0) return null;
 				
@@ -71,6 +74,7 @@ public class PhotoUtil {
 				final ByteArrayOutputStream cropped_os = new ByteArrayOutputStream();
 				
 				ImageIO.write(croppedImage, extName, cropped_os);
+				
 				
 				final InputStream cropped_is = new ByteArrayInputStream(cropped_os.toByteArray());
 				

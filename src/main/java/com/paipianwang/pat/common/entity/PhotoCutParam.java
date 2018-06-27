@@ -6,33 +6,33 @@ public class PhotoCutParam extends BaseEntity {
 
 	private static final long serialVersionUID = 1155350380579334858L;
 
-	private long userId = 0l; // 用户ID
+	private Long userId = 0l; // 用户ID
 	
 	private String imgUrl = null; // 用户头像地址
 	
 	private String imgFileName = null; // 用户头像文件名
 	
-	private int x = 0;
+	private double x = 0;
 	
-	private int y = 0;
+	private double y = 0;
 	
-	private int x2 = 0;
+	private double x2 = 0;
 	
-	private int y2 = 0;
+	private double y2 = 0;
 	
-	private int width = 0;
+	private double width = 0;
 	
-	private int height = 0;
+	private double height = 0;
 	
-	private int originalWidth = 0;
+	private double originalWidth = 0;
 	
-	private int originalHeight = 0;
+	private double originalHeight = 0;
 
-	public long getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(long userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
@@ -44,67 +44,67 @@ public class PhotoCutParam extends BaseEntity {
 		this.imgUrl = imgUrl;
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 
-	public int getX2() {
+	public double getX2() {
 		return x2;
 	}
 
-	public void setX2(int x2) {
+	public void setX2(double x2) {
 		this.x2 = x2;
 	}
 
-	public int getY2() {
+	public double getY2() {
 		return y2;
 	}
 
-	public void setY2(int y2) {
+	public void setY2(double y2) {
 		this.y2 = y2;
 	}
 
-	public int getWidth() {
+	public double getWidth() {
 		return width;
 	}
 
-	public void setWidth(int width) {
+	public void setWidth(double width) {
 		this.width = width;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
-	public int getOriginalWidth() {
+	public double getOriginalWidth() {
 		return originalWidth;
 	}
 
-	public void setOriginalWidth(int originalWidth) {
+	public void setOriginalWidth(double originalWidth) {
 		this.originalWidth = originalWidth;
 	}
 
-	public int getOriginalHeight() {
+	public double getOriginalHeight() {
 		return originalHeight;
 	}
 
-	public void setOriginalHeight(int originalHeight) {
+	public void setOriginalHeight(double originalHeight) {
 		this.originalHeight = originalHeight;
 	}
 
