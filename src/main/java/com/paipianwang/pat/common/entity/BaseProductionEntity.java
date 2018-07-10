@@ -51,6 +51,8 @@ public class BaseProductionEntity extends BaseEntity {
 	private String referrerName;
 	/** 身份 **/
 	private String identity;
+	/** 报价单明细名称**/
+	private String quoTypeName;
 	
 	public String getReferrer() {
 		return referrer;
@@ -172,5 +174,12 @@ public class BaseProductionEntity extends BaseEntity {
 		this.photo = photo;
 	}
 
+	public String getQuoTypeName() {
+		return quoTypeName;
+	}
+
+	public void setQuoTypeName(String quoTypeName) {
+		this.quoTypeName = quoTypeName;
+	}
 	
 }
