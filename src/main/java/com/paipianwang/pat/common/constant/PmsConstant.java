@@ -217,4 +217,7 @@ public class PmsConstant {
 	public static final String SQL_METADATA = "metaData";
 	
 	public static final String SQL_CONDITION = "condition";
+	
+	//缓存数据
+	public static final String CACHE_KEYNAME="_cache";
 }

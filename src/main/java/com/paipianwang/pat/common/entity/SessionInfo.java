@@ -40,6 +40,8 @@ public class SessionInfo extends BaseEntity {
 
 	// add by wanglc 缓存手机号
 	private String telephone = null; // 手机号
+	
+	private Integer cacheTab=0;//工具缓存标记 对应字节位
 
 	public String getTelephone() {
 		return telephone;
@@ -182,6 +184,14 @@ public class SessionInfo extends BaseEntity {
 
 	public void setActivitiUserId(String activitiUserId) {
 		this.activitiUserId = activitiUserId;
+	}
+
+	public Integer getCacheTab() {
+		return cacheTab;
+	}
+
+	public void setCacheTab(Integer cacheTab) {
+		this.cacheTab = cacheTab;
 	}
 
 }
