@@ -13,6 +13,8 @@ public class SessionInfo extends BaseEntity {
 	private long[] sum;
 
 	private boolean superAdmin = false; // 超级管理员
+	
+	private Integer userRank=0;//用户身份 0-普通用户 1-联合创始人
 
 	private String description = null; // 描述
 
@@ -192,6 +194,14 @@ public class SessionInfo extends BaseEntity {
 
 	public void setCacheTab(Integer cacheTab) {
 		this.cacheTab = cacheTab;
+	}
+
+	public Integer getUserRank() {
+		return userRank;
+	}
+
+	public void setUserRank(Integer userRank) {
+		this.userRank = userRank;
 	}
 
 }
