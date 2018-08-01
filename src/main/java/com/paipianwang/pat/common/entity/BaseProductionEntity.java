@@ -44,6 +44,9 @@ public class BaseProductionEntity extends BaseEntity {
 	/** 照片 对于设备是非持久化字段 **/
 	private String photo;
 	
+	/** 逻辑删除位 1-已删除 0-未删除（默认） **/
+	private Integer deleteStatus;
+	
 	//非持久化字段
 	/** 关联供应商名称 **/
 	private String teamName;
@@ -180,6 +183,14 @@ public class BaseProductionEntity extends BaseEntity {
 
 	public void setQuoTypeName(String quoTypeName) {
 		this.quoTypeName = quoTypeName;
+	}
+
+	public Integer getDeleteStatus() {
+		return deleteStatus;
+	}
+
+	public void setDeleteStatus(Integer deleteStatus) {
+		this.deleteStatus = deleteStatus;
 	}
 	
 }
