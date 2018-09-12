@@ -218,4 +218,8 @@ public class PublicConfig implements Serializable {
 	 * 默认文件服务器路径
 	 */
 	public static String FDFS_URL=PUBLIC_CONFIG.get("upload.server.dfs.url");
+	/**
+	 * 内网FastDFS文件请求地址
+	 */
+	public static String FDFS_TRACKER_INNER_PATH = PUBLIC_SYSTEM.get("storage_tracker_inner");
 }
