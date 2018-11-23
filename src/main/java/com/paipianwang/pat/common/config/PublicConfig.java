@@ -222,4 +222,15 @@ public class PublicConfig implements Serializable {
 	 * 内网FastDFS文件请求地址
 	 */
 	public static String FDFS_TRACKER_INNER_PATH = PUBLIC_SYSTEM.get("storage_tracker_inner");
+	
+	/**
+	 * 微信小程序配置
+	 */
+	//项目小程序：APPID
+	public static String MINIPROGRAM_PRO_APPID=PUBLIC_SYSTEM.get("miniprogram.pro.appid");
+	//项目小程序：SECRET
+	public static String MINIPROGRAM_PRO_SECRET=PUBLIC_SYSTEM.get("miniprogram.pro.secret");
+	//项目小程序：TOKENPATH IN REDIS 
+	public static String MINIPROGRAM_PRO_REDIS_TOKEN=PUBLIC_SYSTEM.get("miniprogram.pro.redis.token");
+	
 }
